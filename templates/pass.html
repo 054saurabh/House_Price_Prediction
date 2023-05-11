@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        *{
+            background-image: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1{
+            text-align: center;
+            margin-top: 280px;
+            color: green;
+            font-size: 60px;
+            background: transparent;
+            box-shadow: 2px 2px 20px 2px rgba(228, 243, 92, 0.388);
+            border-radius: 10px;
+        }
+        .but{
+            font-size: 25px;
+            background-color: blue;
+            border-color: rgba(9, 255, 0, 0.671);
+            border-radius: 6px;
+            height: 50px;
+            width: 90px;
+            color: black;
+            margin: 0px;
+            position: relative;
+            left: 1350px;
+            
+        }
+        .but:hover{
+            background-color: rgba(0, 0, 0, 0.562);
+            border-color: rgb(12, 12, 10);
+            color: skyblue;
+        }
+        h1:hover{
+            font-size: 80px;
+            background: linear-gradient(rgba(0, 0, 255, 0.375),rgba(255, 0, 0, 0.381),rgba(0, 0, 0, 0.332),rgba(255, 255, 255, 0.348),rgba(0, 128, 0, 0.375),rgba(255, 192, 203, 0.375));
+            color: white;
+            border-radius: 10px;
+            animation-name: example;
+            animation-duration: 8s;
+        }
+        
+        .wel{
+            font-size: 20px;
+            color: black;
+            text-shadow: 0cm;
+            margin-top: 110px;
+
+        }
+        .wel:hover{
+            cursor: not-allowed;
+        }
+        @keyframes example {
+            0% {color: red;}
+            25% {color: yellow;}
+            50%{color: blue;}
+            75%{color: rgb(12, 240, 69);}
+            100%{color: orange;}
+        }
+        h2{
+            width: 100px;
+            height: 100px;
+            color: aqua;
+            animation-name: example;
+            animation-duration: 15s;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- AFTER CLICKING ON CLOSE BUTTON THIS WILL SEND YOU TO THE HOME PAGE -->
+    <div>
+        <button class="but" type="button" name="button"><a href="{{url_for('main')}}">close</a></button>
+    </div>
+    <!-- THIS CODE HELP TO DISPLAY THE FINAL RESULT ON WEB-PAGE -->
+    <div>
+        {% if n>0 and area>0 and bhk>0 and bath>0 %} 
+        <h1>House price: {{n}} lakh</h1>
+        {% else %}
+        <h1>House price: Enter correct data</h1>
+        {% endif %}
+    </div>
+    <br><br>
+    <div>
+        <marquee direction="right" class="wel"><h2>welcome to my page</h2></marquee>
+    </div>
+</body>
+</html>

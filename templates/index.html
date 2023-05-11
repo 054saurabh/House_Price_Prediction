@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predict</title>
+    <style>
+        *{
+            margin: 2.5px;
+            padding: 2.5px;
+        }
+        h1{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 35px;
+            color: rgba(0, 255, 255, 0.767);
+        }
+        .card{
+            position: relative;
+            height: 190px;
+            width: 190px;;
+            background-color: rgb(0, 60, 255);
+            background: transparent;
+            border: 1px solid rgb(217, 202, 38);
+            border-top-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+           
+        } 
+        .card::before{
+            content: '';
+            position: absolute;
+            background: rgba(0, 0, 0, 0.427);
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            z-index: -1;
+        }
+        input{
+            position: relative;
+            left: 30px;
+            height: 35px;
+            width: 500px;
+            background-color: rgba(191, 127, 255, 0.43);
+            border-radius: 8px;
+            font-size: 20px;
+            color: rgba(4, 255, 0, 0.738);
+            
+        }
+        .areat{
+            position: relative;
+            left: 30px;
+            height: 45px;
+            width: 509px;
+            font-size: 25px;
+            color: rgba(4, 255, 0, 0.738);
+            background-color: rgba(191, 127, 255, 0.43);
+            border-radius: 8px;
+        }
+        button{
+            position: relative;
+            left: 85px;
+            height: 40px;
+            width: 400px;
+            font-size: 25px;
+            border-radius: 10px;
+            color: rgb(235, 235, 238);
+            background-color: blue;
+            align-items: center;
+            border-width: 2px;
+            border-color: rgb(55, 218, 82);
+        }
+        .card-body{
+            position: relative;
+            left: 420px;
+            top: 0px;
+            background-color: rgba(0, 0, 0, 0.362);
+            width: 600px;
+            border-radius: 10px;
+            box-shadow: 1px 6px 20px 2px black;
+            
+        }
+        label{
+            position: relative;
+            left: 30px;
+            font-size: 30px;
+            color: rgb(209, 10, 227);
+        }
+        body{
+            background-image: url('https://images.hdqwalls.com/wallpapers/house-in-nature-wallpaper.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            
+        }
+        option{
+            font-size: 20px;
+            height: 45px;
+            width: 520px;
+            color: black;
+        }
+        .head{
+            position: relative;
+            top: 24px;
+        }
+        .sq:hover{
+            background-color: rgba(0, 0, 0, 0.166);
+        }
+        .bhk:hover{
+            background-color: rgba(0, 0, 0, 0.166);
+        }
+        .bath:hover{
+            background-color: rgba(0, 0, 0, 0.166);
+        }
+        #button:hover{
+            color: green;
+            font-size: 30px;
+            background-color: rgba(13, 13, 13, 0.574);
+            box-shadow: 21px 4px 40px 5px rgba(181, 222, 16, 0.747);
+        }
+        .head:hover{
+            cursor: wait;
+        }
+        .balcony:hover{
+            background-color: rgba(0, 0, 0, 0.166);
+        }
+        .areat:hover{
+            background-color: rgba(0, 0, 0, 0.166);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="bg-dark">
+        <div class="container">
+            <div class="card">
+                <h1 class="head">House price prediction</h1>
+                <div class="card-body">
+                    <!-- CREATE HTML FORM TO TAKE INPUT FROM USER AND SENT TO BACKEND USING POST-METHOD -->
+                    <form name="pass_data" method="post" action="/predict">
+                        <div class="sqrt">
+                            <label>Enter area in sqrt:</label><br>
+                            <input type="number" class="sq"  id="Sq" name="area" placeholder="Enter Area Sqrt" required="required">
+                        </div>
+                        <div class="bh">
+                            <label>Enter BHK:</label><br>
+                            <input type="number" class="bhk" id="BHk" name="bhk" placeholder="inter BHK" required="required">
+                        </div>
+
+                        <div class="balcony">
+                            <label>Enter Balcony:</label><br>
+                            <input type="number" class="balcony" id="balcony" name="balcony" placeholder="Enter Balcony" required="required">
+                        </div>
+                        <div class="areatype">
+                            <label>Select Areatype:</label><br>
+                            <select name="areatype" class="areat" required="required">
+                                <option>Super built-up Area</option>
+                                <option>Built-up Area</option>
+                                <option>Plot  Area</option>
+                                <option>Carpet  Area</option>
+                            </select>
+                        </div>
+
+                        <div class="bath">
+                            <label>Enter no. of bath:</label><br>
+                            <input type="number" class="bath" id="BATh" name="bath" placeholder="inter no. of bath" required="required">
+                        </div>
+                        <div class="butt">
+                            <button id="button" type="submit" name="submit" value="submit">predict</button>
+                        </div>
+                    </form>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

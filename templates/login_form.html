@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-form</title>
+    <style>
+        /* #login_form{
+            display: none;
+        } */
+        body{
+            background-color:  rgb(228, 158, 30);
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        #login_form{
+            background-color: white;
+            position: relative;
+            left: 550px;
+            top: 100px;
+            height: 500px;
+            width: 450px;
+            border-radius: 10px;
+            box-shadow: 6px 1px 20px 2px rgba(255, 0, 0, 0.545);
+        }
+        label{
+            font-size: 28px;
+            color: blue;
+            position: relative;
+            left: 70px;
+            top: 25px;
+        }
+        input{
+            font-size: 20px;
+            color: rgb(9, 255, 0);
+            position: relative;
+            left: 70px;
+            top: 25px;
+            border-radius: 6px;
+            margin: 4px;
+            height: 30px;
+            width: 305px;
+            background-color: rgba(0, 0, 0, 0.093);
+
+        }
+        #gender{
+            font-size: 20px;
+            position: relative;
+            left: 70px;
+            top: 25px;
+            border-radius: 6px;
+            margin: 4px;
+            height: 38px;
+            width: 320px;
+            background-color: rgba(0, 0, 0, 0.092);
+
+        }
+        #button{
+            font-size: 30px;
+            color: rgb(255, 0, 68);
+            background-color: blue;
+            position: relative;
+            left: 130px;
+            top: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 4px;
+            height: 50px;
+            width: 200px;
+            border-width: 2.5px;
+            border-color: yellow;
+            
+
+
+        }
+        input:hover{
+            background-color: aliceblue;
+        }
+        #gender:hover{
+            background-color: aliceblue;
+        }
+        #button:hover{
+            background-color: rgba(42, 188, 32, 0.803);
+            box-shadow: 6px 2px 20px 4px  rgba(221, 189, 9, 0.633);
+        }  
+        @keyframes sau {
+            0%{
+                width: 0%;
+                background-color: black;
+            }
+            25%{
+                width: 25%;
+                background-color: black;
+            }
+            50%{
+                width: 50%;
+                background-color: black;
+            }
+            75%{
+                width: 75%;
+                background-color: black;
+            }
+            100%{
+                width: 100%;
+                background-color: black;
+                
+            }
+            
+        }
+        .end{
+            height: 3px;
+            background-color: rgb(228, 158, 30);
+            animation: sau 1s ease-in-out 0.04s;   
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // alert('WELCOME❤️')
+        // setTimeout(function() {
+        // document.getElementById('login_form').style.display = 'block';
+        // }, 1050); 
+    </script>
+
+    <div class="end"></div>
+    <div id="login_form">
+        <div class="container">
+            <form action="/login" method="post">
+                <div>
+                   <label>Enter name :</label><br>
+                   <input name="name" class="name" type="text" required="required" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label>Enter Email ID :</label><br>
+                    <input name="Email" class="Email"  type="email" required="required" placeholder="Enter your Email ID">
+                </div>
+                <div>
+                    <label>Enter Mobile No. :</label><br> 
+                    <input name="Mobile" class="Mobile"  type="number" required="required" placeholder="Enter your Mobile No.">
+                </div>
+                <div>
+                    <label>Gender :</label><br>
+                    <select name="gende" id="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Enter Password :</label><br>
+                    <input name="Password" class="Password"  type="password" required="required" placeholder="Password">
+                </div>
+                <div>
+                    <button id="button" type="submit" name="submit" value="submit">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
