@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <!-- css styling start -->
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-image: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+
+        }
+        a:hover{
+            color: blue;
+        }
+        .but{
+            background-color: blue;
+            font-size: 25px;
+            border-color: rgba(9, 255, 0, 0.671);
+            border-radius: 6px;
+            height: 50px;
+            width: 90px;
+            position: relative;
+            top: 22px;
+            left: 1350px;
+            
+        }
+        .but:hover{
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.167);
+            border-color: rgb(12, 12, 10);
+            color: skyblue;
+        }
+        h1{
+            text-shadow: 3px 2px 3px rgb(52, 251, 248);
+            text-align: center;
+            color: green;
+            font-size: 60px;
+            background: transparent;
+            box-shadow: 2px 2px 20px 2px rgba(228, 243, 92, 0.388);
+            border-radius: 10px;
+        }
+        h1:hover{
+            transform: scale(1.1);
+            background: linear-gradient(rgba(0, 0, 255, 0.375),rgba(255, 0, 0, 0.381),rgba(0, 0, 0, 0.332),rgba(255, 255, 255, 0.348),rgba(0, 128, 0, 0.375),rgba(255, 192, 203, 0.375));
+            color: white;
+            border-radius: 10px;
+            animation-name: example;
+            animation-duration: 8s;
+        }
+        .result{
+            width: 1300px;
+            position:relative;
+            top: 260px;
+            left: 89px;
+        }
+        
+        .wel{
+            font-size: 34px;
+            color: black;
+            position: relative;
+            top: 293px;
+
+        }
+        .wel:hover{
+            cursor: not-allowed;
+        }
+        @keyframes example {
+            0% {color: red;}
+            25% {color: yellow;}
+            50%{color: blue;}
+            75%{color: rgb(12, 240, 69);}
+            100%{color: orange;}
+        }
+        h2{
+            width: 100px;
+            height: 100px;
+            color: aqua;
+            animation-name: example;
+            animation-duration: 15s;
+        }
+        .but:active{
+            transform: scale(0.9);
+        }
+    </style>
+    <!-- styling END -->
+</head>
+<body>
+    <!-- CLOSE BUTTON RENDER ON HOME PAGE -->
+    <div>
+        <button class="but" type="button" name="button"><a href="{{url_for('main')}}">close</a></button>
+    </div>
+    <!-- THIS CODE HELP TO DISPLAY THE FINAL RESULT ON WEB-PAGE -->
+    <div class="result" >
+        {% if n>0 and area>0 and bhk>0 and bath>0 %} 
+        <h1>House price: {{n}} lakh</h1>
+        {% else %}
+        <h1>House price: Enter correct data</h1>
+        {% endif %}
+    </div>
+    <br><br>
+    <marquee direction="right" class="wel" onmouseover="this.stop();" onmouseout="this.start();"><h2>welcome</h2></marquee>
+</body>
+</html>
