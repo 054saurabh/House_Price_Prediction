@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    image: saurabh0540/cicd-pipeline:latest
+    container_name: cicd-pipeline-container
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - ENV=production
