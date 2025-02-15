@@ -1,0 +1,107 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../pic/wall_light.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+a:hover{
+    color: blue;
+}
+.but{
+    background-color: blue;
+    font-size: 25px;
+    border-color: rgba(9, 255, 0, 0.671);
+    border-radius: 6px;
+    height: 50px;
+    width: 90px;
+    position: relative;
+    top: 22px;
+    left: 1350px;
+    
+}
+.but:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.167);
+    border-color: rgb(12, 12, 10);
+    color: skyblue;
+}
+h1{
+    text-shadow: 3px 2px 3px rgb(52, 251, 248);
+    text-align: center;
+    color: green;
+    font-size: 60px;
+    background: transparent;
+    box-shadow: 2px 2px 20px 2px rgba(228, 243, 92, 0.388);
+    border-radius: 10px;
+}
+h1:hover{
+    transform: scale(1.1);
+    background: linear-gradient(rgba(0, 0, 255, 0.375),rgba(255, 0, 0, 0.381),rgba(0, 0, 0, 0.332),rgba(255, 255, 255, 0.348),rgba(0, 128, 0, 0.375),rgba(255, 192, 203, 0.375));
+    color: white;
+    border-radius: 10px;
+    animation-name: example;
+    animation-duration: 8s;
+}
+.result{
+    width: 1300px;
+    position:relative;
+    top: 262px;
+    left: 89px;
+}
+
+.wel{
+    font-size: 34px;
+    color: black;
+    position: relative;
+    top: 500px;
+
+}
+.wel:hover{
+    cursor: not-allowed;
+}
+@keyframes example {
+    0% {color: red;}
+    25% {color: yellow;}
+    50%{color: blue;}
+    75%{color: rgb(12, 240, 69);}
+    100%{color: orange;}
+}
+h2{
+    width: 100px;
+    height: 100px;
+    color: aqua;
+    animation-name: example;
+    animation-duration: 15s;
+}
+.but:active{
+    transform: scale(0.9);
+}
+footer {
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+    font-size: 21px;
+    position:absolute;
+    top: 92%;
+    width: 96.99%;
+
+  }
+footer span a {
+  color: crimson;
+  text-decoration: none;
+}
+footer{
+    position:fixed;
+}
+.wel{
+    position:fixed;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/pas.css">
+    <title>Result</title>
+    
+</head>
+<body>
+    <!-- CLOSE BUTTON RENDER ON HOME PAGE -->
+    <div>
+        <button class="but" type="button" name="button"><a href="{{url_for('main')}}">close</a></button>
+    </div>
+    <!-- THIS CODE HELP TO DISPLAY THE FINAL RESULT ON WEB-PAGE -->
+    <div class="result" >
+        {% if n>0 and area>0 and bhk>0 and bath>0 %} 
+        <h1>House price: {{n}} lakh</h1>
+        {% else %}
+        <h1>House price: Enter correct data</h1>
+        {% endif %}
+    </div>
+    <br><br>
+    <marquee direction="right" class="wel" onmouseover="this.stop();" onmouseout="this.start();"><h2>welcome</h2></marquee>
+    <footer>
+        <span>Created By <a href="/">saurabhjha</a> | <span class="far fa-copyright">&copy;</span> 2022 All rights reserved.</span>
+    </footer>
+</body>
+</html>

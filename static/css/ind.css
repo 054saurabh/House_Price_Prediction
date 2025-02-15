@@ -1,0 +1,130 @@
+
+*{
+    margin: 2.5px;
+    padding: 2.5px;
+}
+h1{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    color: rgba(0, 255, 255, 0.767);
+}
+.card{
+    position: relative;
+    height: 190px;
+    width: 190px;;
+    background-color: rgb(0, 60, 255);
+    background: transparent;
+    border: 1px solid rgb(217, 202, 38);
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+   
+} 
+.card::before{
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.427);
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    z-index: -1;
+}
+input{
+    position: relative;
+    left: 30px;
+    height: 35px;
+    width: 500px;
+    background-color: rgba(191, 127, 255, 0.43);
+    border-radius: 8px;
+    font-size: 20px;
+    color: rgba(4, 255, 0, 0.738);
+    
+}
+.areat{
+    position: relative;
+    left: 30px;
+    height: 45px;
+    width: 509px;
+    font-size: 25px;
+    color: rgba(4, 255, 0, 0.738);
+    background-color: rgba(191, 127, 255, 0.43);
+    border-radius: 8px;
+}
+button{
+    position: relative;
+    top: 6px;
+    left: 85px;
+    height: 40px;
+    width: 400px;
+    font-size: 25px;
+    border-radius: 10px;
+    color: rgb(235, 235, 238);
+    background-color: blue;
+    align-items: center;
+    border-width: 2px;
+    border-color: rgb(55, 218, 82);
+}
+.card-body{
+    position: relative;
+    left: 429px;
+    top: -35px;
+    background-color: rgba(0, 0, 0, 0.362);
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 1px 6px 20px 2px black;
+    
+}
+label{
+    position: relative;
+    left: 30px;
+    font-size: 30px;
+    color: rgb(209, 10, 227);
+}
+body{
+    background-image: url('../pic/bg_gif.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+option{
+    font-size: 20px;
+    height: 45px;
+    width: 520px;
+    color: black;
+}
+.head{
+    position: relative;
+    top: 24px;
+}
+.sq:hover{
+    background-color: rgba(0, 0, 0, 0.166);
+}
+.bhk:hover{
+    background-color: rgba(0, 0, 0, 0.166);
+}
+.bath:hover{
+    background-color: rgba(0, 0, 0, 0.166);
+}
+#button:hover{
+    color: green;
+    font-size: 30px;
+    background-color: rgba(13, 13, 13, 0.574);
+    box-shadow: 21px 4px 40px 5px rgba(181, 222, 16, 0.747);
+}
+.head:hover{
+    cursor: wait;
+}
+.balcony:hover{
+    background-color: rgba(0, 0, 0, 0.166);
+}
+.areat:hover{
+    background-color: rgba(0, 0, 0, 0.166);
+}
+#button:hover{
+    cursor: pointer;
+}
+#button:active{
+    transform: scale(0.9);
+}

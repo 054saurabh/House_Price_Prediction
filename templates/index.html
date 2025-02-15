@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/ind.css">
+    <title>House Price Predict</title>
+    
+</head>
+<body>
+    <div class="bg-dark">
+        <div class="container">
+            <div class="card">
+                <h1 class="head">House price prediction</h1>
+                <div class="card-body">
+                    <!-- CREATE HTML FORM TO TAKE INPUT FROM USER -->
+                    <form name="pass_data" method="post" action="/predict">
+                        <div class="sqrt">
+                            <label>Enter area in sqrt:</label><br>
+                            <input type="number" class="sq"  id="Sq" name="area" placeholder="Enter Area Sqrt" required="required">
+                        </div>
+                        <div class="bh">
+                            <label>Enter BHK:</label><br>
+                            <input type="number" class="bhk" id="BHk" name="bhk" placeholder="Enter BHK" required="required">
+                        </div>
+
+                        <div class="balcony">
+                            <label>Enter Balcony:</label><br>
+                            <input type="number" class="balcony" id="balcony" name="balcony" placeholder="Enter Balcony" required="required">
+                        </div>
+                        <div class="areatype">
+                            <label>Select Areatype:</label><br>
+                            <select name="areatype" class="areat" required="required">
+                                <option>Super built-up Area</option>
+                                <option>Built-up Area</option>
+                                <option>Plot  Area</option>
+                                <option>Carpet  Area</option>
+                            </select>
+                        </div>
+
+                        <div class="bath">
+                            <label>Enter no. of bath:</label><br>
+                            <input type="number" class="bath" id="BATh" name="bath" placeholder="Enter no. of bath" required="required">
+                        </div>
+                        <div class="butt">
+                            <button id="button" type="submit" name="submit" value="submit">predict</button>
+                        </div>
+                    </form>
+                    <!-- FORM end -->
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+
+</body>
+</html>
